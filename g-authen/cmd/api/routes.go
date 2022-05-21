@@ -21,5 +21,7 @@ func (app *Config) routes() http.Handler {
 
 	mux.Use(middleware.Heartbeat("/ping"))
 
+	mux.POST("/authenticate", app.Authenticate)
+
 	return mux
 }
