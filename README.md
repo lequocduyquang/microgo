@@ -7,7 +7,7 @@ Build a simple microservice with Golang
 
 ## Installation
 
-Use Makefile for build and start
+Use Makefile in /project for build and start
 
 ```bash
 make up_build
