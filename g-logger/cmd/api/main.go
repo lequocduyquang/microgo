@@ -15,7 +15,7 @@ import (
 const (
 	port     = "80"
 	rpcPort  = "5001"
-	mongoURL = "mongodb://mongo:27017"
+	mongoURL = "mongodb://localhost:27017"
 	gRPCPort = "50001"
 )
 
@@ -45,7 +45,8 @@ func main() {
 		Models: data.New(client),
 	}
 
-	go app.serve()
+	log.Printf("Starting g-logger service on port %s\n", port)
+	app.serve()
 }
 
 func (app *Config) serve() {
@@ -72,6 +73,8 @@ func connectToMongo() (*mongo.Client, error) {
 		log.Println("Error connect Mongo: ", err)
 		return nil, err
 	}
+
+	log.Println("Connected to Mongo!")
 
 	return c, nil
 }
