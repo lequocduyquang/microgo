@@ -63,7 +63,7 @@ func (l *LogEntry) All() ([]*LogEntry, error) {
 		log.Println("Finding all docs error: ", err)
 		return nil, err
 	}
-	defer cursor.Close()
+	defer cursor.Close(ctx)
 
 	var logs []*LogEntry
 	for cursor.Next(ctx) {
@@ -93,7 +93,8 @@ func (l *LogEntry) GetOne(id string) (*LogEntry, error) {
 	}
 
 	var entry LogEntry
-	err = collection.FindOne(ctx, bson.M{"_id", docID}).Decode(&entry)
+	filter := bson.D{{"_id", docID}}
+	err = collection.FindOne(ctx, filter).Decode(&entry)
 	if err != nil {
 		return nil, err
 	}
@@ -123,16 +124,16 @@ func (l *LogEntry) Update() (*mongo.UpdateResult, error) {
 		return nil, err
 	}
 
+	filter := bson.D{{"_id", docID}}
+	update := bson.D{{"$set", bson.D{
+		{"name", l.Name},
+		{"data", l.Data},
+		{"updated_at", time.Now()},
+	}}}
 	result, err := collection.UpdateOne(
 		ctx,
-		bson.M{"_id", docID},
-		bson.D{
-			{"$set": bson.D{
-				{"name", l.Name},
-				{"data", l.Data},
-				{"updated_at", time.Now()},
-			}},
-		},
+		filter,
+		update,
 	)
 
 	if err != nil {
