@@ -1,10 +1,10 @@
 # MICROGO
 
-Build a simple microservice with Golang
-* g-authen
-* g-broker
-* g-logger
-* g-mail
+Build microservice with Golang
+* g-authen: authenticate service using Go and Postgres
+* g-broker: gateway service using Go
+* g-logger: logger service using Go and MongoDB
+* g-mail: mailer service using Go and Mailhog
 
 ## Installation
 
