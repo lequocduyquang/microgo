@@ -57,6 +57,17 @@ services:
       FROM_NAME: "Quang Le"
       FROM_ADDRESS: "quang.le@example.com"
 
+  g-listener:
+    build:
+      context: ./../g-listener
+      dockerfile: ./../g-listener/Dockerfile
+    restart: always
+    ports:
+      - "8084:80"
+    deploy:
+      mode: replicated
+      replicas: 1
+
   postgres:
       image: 'postgres:14.2'
       ports:

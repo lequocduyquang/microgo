@@ -1,3 +1,4 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 3.81
 # Copyright (C) 2006  Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.
@@ -6,7 +7,7 @@
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Sun May 22 11:28:04 2022
+# Make data base, printed on Sun May 22 12:11:44 2022
 
 # Variables
 
@@ -41,7 +42,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 P9K_SSH = 0
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/g5/vllplqcj09g_98mgmvqbh0n40000gn/T/vscode-ipc-aa19bcbd-24ec-4abe-83be-84f172452d8d.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/g5/vllplqcj09g_98mgmvqbh0n40000gn/T/vscode-ipc-61004c9f-28ca-43c4-aef9-b7e995004788.sock
 # environment
 VSCODE_CWD = /
 # makefile (from `Makefile', line 2)
@@ -153,7 +154,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 41760
+VSCODE_PID = 60612
 # variable set hash-table stats:
 # Load=72/1024=7%, Rehash=0, Collisions=1/96=1%
 
@@ -163,9 +164,9 @@ VSCODE_PID = 41760
 
 # Directories
 
-# . (device 16777225, inode 7398369): 5 files, no impossibilities.
+# . (device 16777225, inode 7398369): 6 files, no impossibilities.
 
-# 5 files, no impossibilities in 1 directories.
+# 6 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -288,7 +289,7 @@ down:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun May 22 11:28:04 2022
+# Finished Make data base on Sun May 22 12:11:44 2022
 
  
 make: *** No rule to make target `all'.  Stop.
