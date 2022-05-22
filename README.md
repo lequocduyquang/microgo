@@ -5,6 +5,7 @@ Build microservice with Golang
 * g-broker: gateway service using Go
 * g-logger: logger service using Go and MongoDB
 * g-mail: mailer service using Go and Mailhog
+* g-listener: listener service using Go and RabbitMQ
 
 ## Installation
 
